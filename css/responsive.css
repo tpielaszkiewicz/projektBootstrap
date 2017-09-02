@@ -1,0 +1,29 @@
+@media screen and (max-width: 767px) {
+    #navi-main {
+        padding-right: 20px;
+    }
+    .navbar-default {
+        background-color: #f7f7f7;
+    }
+    .navbar-default .navbar-nav>li>a {
+        color: #0ed8d6;
+    }
+    #brand {
+        color: #0ed8d6;
+    }
+    .navbar-nav {
+        text-align: right;
+    }
+    .navbar-default .navbar-toggle .icon-bar {
+        background-color: #0ed8d6;
+        
+    }
+    .navbar-default .navbar-toggle:focus,
+    .navbar-default .navbar-toggle:hover {
+        background-color: #0ed8d6;
+    }
+    .navbar-default .navbar-toggle:focus .icon-bar ,
+    .navbar-default .navbar-toggle:hover .icon-bar {
+        background-color: #f7f7f7;
+    }
+}
