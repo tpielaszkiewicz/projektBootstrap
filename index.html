@@ -288,34 +288,38 @@
                 <h3 class="text-uppercase">contact us</h3>
                 <p class="sec-descr">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
             </div>
-            <form action="javascript:sendMail();">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-6">
+            <div class="row">
+                <form action="javascript:sendMail();">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6">
 
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="username" placeholder="Username *">
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" id="email" placeholder="E-mail *">
-                        </div>
-                        
-                        <div class="form-group">
-                            <input type="number" class="form-control" id="phone" placeholder="Phone number *">
-                        </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="username" placeholder="Username *">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="email" placeholder="E-mail *">
+                                </div>
 
-                    </div>
-                    <div class="col-xs-12 col-sm-6">
-                        <div class="form-group">
-                            <textarea class="form-control" rows="6" id="message" placeholder="Your message.."></textarea>
+                                <div class="form-group">
+                                    <input type="number" class="form-control" id="phone" placeholder="Phone number *">
+                                </div>
+
+                            </div>
+                            <div class="col-xs-12 col-sm-6">
+                                <div class="form-group">
+                                    <textarea class="form-control" rows="6" id="message" placeholder="Your message.."></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <button type="submit" id="send-message" class="btn btn-primary  text-uppercase">send message</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-12">
-                        <button type="submit" id="send-message" class="btn btn-primary  text-uppercase">send message</button>
-                    </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </section>
 
