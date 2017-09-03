@@ -1,9 +1,3 @@
-@media (orientation:portrait) {
-    #contact {
-        /*        height: 100vh;*/
-    }
-}
-
 @media screen and (max-width: 767px) {
     /*    zmienmy style dla progu w ktorym zmienia je bootstrap*/
     /*    menu kolor bialy*/
@@ -40,10 +34,11 @@
 
 
 /*zeby nam nie wychodziło spoza kontenera - mozna tez sie pobawic wysokosciami czcionek ?*/
+
 @media screen and (max-height: 570px) {
     #contact {
         height: 120vh;
-        padding: 10px;
+        padding: 0px;
     }
     #contact .row:first-child {
         margin-bottom: 0px;
@@ -53,6 +48,12 @@
 @media screen and (max-height: 380px) {
     #contact {
         padding: 0px;
-        height: 140vh;
+        height: 1440vh;
+    }
+}
+
+@media (orientation:portrait) and (max-height: 570px) {
+    #contact {
+        height: 100vh;
     }
 }

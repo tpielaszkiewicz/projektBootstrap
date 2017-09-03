@@ -30,14 +30,14 @@ h4 {
 /*dodajemy margines tylko dla pierwszego rzedu z nagłówkiem!*/
 
 .row:first-child {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 
 /*wszedzie bedziemy miec paddingi takie same + text align center*/
 
 section{
-    padding: 70px 0px;
+    padding: 50px 0px;
     text-align: center;
 }
 
