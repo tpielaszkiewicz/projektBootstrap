@@ -7,6 +7,9 @@ body {
     box-sizing: border-box;
 }
 
+
+/*stylowanie nagłówkoów na resztę dokumentu*/
+
 h1,
 h3 {
     font-family: 'Montserrat', sans-serif;
@@ -23,16 +26,49 @@ h4 {
     font-weight: 600;
 }
 
+
+/*dodajemy margines tylko dla pierwszego rzedu z nagłówkiem!*/
+
+.row:first-child {
+    margin-bottom: 40px;
+}
+
+
+/*wszedzie bedziemy miec paddingi takie same + text align center*/
+
+section,
+footer {
+    padding: 70px 0px;
+    text-align: center;
+}
+
+
+/*style przyciskow*/
+#view-more,
+#send-message{
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0ed8d6;
+    transition: all 0.5s;
+}
+
+#view-more:hover,
+#send-message:hover{
+    color: #0ed8d6;
+    background-color: #f7f7f7;
+}
+
+/*TU ZACZYNAMY KONKRETNE STYLOWANIE ELEMENTOW*/
+/*nawigacja przezroczysta, bez granicy - bedziemy je zmieniać wiec transition na 0.5 s*/
+
 .navbar-default {
     border: none;
     background-color: transparent;
     transition: all 0.5s;
 }
 
-#navi-main {
-    padding-left: 60px;
-    padding-right: 100px;
-}
+
+/*stylujemy tekst linkow */
 
 .navbar-default .navbar-nav>li>a {
     font-family: 'Montserrat', sans-serif;
@@ -40,9 +76,15 @@ h4 {
     font-weight: 600;
 }
 
+
+/*tranzycje na hovery*/
+
 .navbar-default .navbar-toggle {
     transition: all 0.5s;
 }
+
+
+/*stylowanie brandu*/
 
 #brand {
     font-family: 'Droid Serif', sans-serif;
@@ -84,24 +126,10 @@ h4 {
     color: #f7f7f7;
 }
 
-#view-more {
-    font-weight: 600;
-    background-color: #0ed8d6;
-    transition: all 0.5s;
-}
 
-#view-more:hover {
-    color: #0ed8d6;
-    background-color: #f7f7f7;
-}
 
 
 /*sekcja druga services*/
-
-#services {
-    text-align: center;
-    padding: 40px;
-}
 
 .sec-descr {
     font-style: italic;
@@ -117,26 +145,32 @@ h4 {
     font-weight: 600;
 }
 
-.fa-comment,
-.fa-cloud-download,
-.fa-briefcase {
-    background: #0ed8d6;
+.service-icon {
+    background-color: #0ed8d6;
     color: white;
     font-size: 60px;
     width: 100px;
     height: 100px;
+    display: inline-block;
     line-height: 100px;
-    border: 1px solid white;
+    border: 1px solid #0ed8d6;
     border-radius: 50%;
-    text-decoration: none;
-    margin: 50px 0px 20px 0px;
+    margin-bottom: 20px;
     transition: all 0.5s;
 }
 
+.service-icon:hover {
+    transform: rotate(360deg);
+    background-color: #fff;
+    color: #0ed8d6;
+    cursor: pointer;
+}
+
+
+/*sekcja portfolio*/
+
 #portfolio {
     background-color: #f7f7f7;
-    text-align: center;
-    padding: 40px 80px;
 }
 
 .thumbnail {
@@ -175,14 +209,17 @@ h4 {
     opacity: 0.7;
 }
 
-.fa-plus {
-    color: white;
-    font-size: 32px;
-    text-decoration: none;
+.portfolio-icon {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.portfolio-icon i {
+    color: white;
+    font-size: 32px;
+    text-decoration: none;
 }
 
 #photo1 {
@@ -209,7 +246,76 @@ h4 {
     background-image: url('../img/portfolio/typing_on_laptop.jpg');
 }
 
-#team {
-    padding: 40px;
-    text-align: center;
+
+/*stylujemy team*/
+
+#team img {
+    max-height: 200px;
 }
+
+.team-descr {
+    font-size: 12px;
+}
+
+
+/*
+
+.team-icon {
+    background-color: #222222;
+    color: white;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid white;
+    border-radius: 50%;
+    display: inline-block;
+    transition: all 0.5s;
+    margin: 0px 10px;
+}
+*/
+
+.fa-facebook,
+.fa-twitter,
+.fa-linkedin {
+    background-color: #222222;
+    color: white;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid white;
+    border-radius: 50%;
+    transition: all 0.5s;
+    margin: 0px 10px;
+}
+
+#team .fa:hover {
+    background-color: #0ed8d6;
+    cursor: pointer;
+}
+
+
+/*stylujemy contact section*/
+
+#contact {
+    height: 80vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/footer/world-map.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+
+/*łopatologicznie wyrównane*/
+
+#contact .form-group {
+    margin-bottom: 16px;
+}
+
+/*
+#send-message{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    background-color: #0ed8d6;  
+}*/

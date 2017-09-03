@@ -2,7 +2,7 @@ $(document).ready(function () {
     barInit();
     changeNavbar();
     changeSizeHandler();
-    rotateIcon();
+//    rotateIcon();
 });
 
 function barInit() {
@@ -44,7 +44,7 @@ function changeSizeHandler() {
 }
 
 function rotateIcon () {
-    $('#services .fa').on({
+    $('.service-icon').on({
         'mouseenter': function (){
            $(this).css('transform','rotate(360deg)');
         },

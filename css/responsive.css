@@ -1,29 +1,37 @@
 @media screen and (max-width: 767px) {
-    #navi-main {
-        padding-right: 20px;
-    }
+    /*    zmienmy style dla progu w ktorym zmienia je bootstrap*/
+    /*    menu kolor bialy*/
     .navbar-default {
         background-color: #f7f7f7;
     }
+    /*    teksty na niebiesko*/
+    #brand,
     .navbar-default .navbar-nav>li>a {
         color: #0ed8d6;
     }
-    #brand {
-        color: #0ed8d6;
-    }
-    .navbar-nav {
+    /*    pozycje po rozinieciu przylgniete do prawej*/
+    .navbar-collapse {
         text-align: right;
     }
+    /*    kreski w icon barze na niebiesko*/
     .navbar-default .navbar-toggle .icon-bar {
         background-color: #0ed8d6;
-        
     }
+    /*    reverse koloru na focus*/
     .navbar-default .navbar-toggle:focus,
     .navbar-default .navbar-toggle:hover {
         background-color: #0ed8d6;
     }
-    .navbar-default .navbar-toggle:focus .icon-bar ,
+    .navbar-default .navbar-toggle:focus .icon-bar,
     .navbar-default .navbar-toggle:hover .icon-bar {
         background-color: #f7f7f7;
+    }
+    /*    dla sekcji team, doloz marines u góry zeby je troche odsunac*/
+    #team figure{
+        margin-top: 20px;
+    }
+    
+    #contact{
+        height: 90vh;
     }
 }
