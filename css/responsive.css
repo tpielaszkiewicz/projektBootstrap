@@ -35,7 +35,7 @@
 
 /*zeby nam nie wychodziło spoza kontenera - mozna tez sie pobawic wysokosciami czcionek ?*/
 
-@media screen and (max-height: 570px) {
+@media (orientation:portrait) and (max-height: 570px) {
     #contact {
         height: 120vh;
         padding: 0px;
@@ -45,15 +45,17 @@
     }
 }
 
-@media screen and (max-height: 380px) {
+@media screen and (max-height: 450px) {
     #contact {
-        padding: 0px;
-        height: 1440vh;
+        padding: 10px;
+        height: 110vh;
     }
 }
 
-@media (orientation:portrait) and (max-height: 570px) {
+@media screen and (max-height: 370px) {
     #contact {
-        height: 100vh;
+        padding: 0px;
+        height: 120vh;
     }
 }
+
