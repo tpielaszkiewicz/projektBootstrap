@@ -1,3 +1,9 @@
+@media (orientation:portrait) {
+    #contact {
+        height: 90vh;
+    }
+}
+
 @media screen and (max-width: 767px) {
     /*    zmienmy style dla progu w ktorym zmienia je bootstrap*/
     /*    menu kolor bialy*/
@@ -27,11 +33,10 @@
         background-color: #f7f7f7;
     }
     /*    dla sekcji team, doloz marines u góry zeby je troche odsunac*/
-    #team figure{
+    #team figure {
         margin-top: 20px;
     }
-    
-    #contact{
+    #contact {
         height: 90vh;
     }
 }
