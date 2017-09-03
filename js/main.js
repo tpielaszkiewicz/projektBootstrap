@@ -2,28 +2,29 @@ $(document).ready(function () {
     barInit();
     changeNavbar();
     changeSizeHandler();
-//    rotateIcon();
+    //    rotateIcon();
+    smoothScroll();
 });
 
 function barInit() {
-    if (($(window).width() >= 768) && ($(window).scrollTop() > 0)) {
-        //        console.log($(window).scrollTop());
-        //        $('.navbar-default').css({
-        //            'background-color': 'rgba(14,216,214, 0.5)'
-        //        });
+    if (($(window).outerWidth() >= 768) && ($(window).scrollTop() > 10)) {
+        $('.navbar-default').addClass('scrolled-menu');
+        $('#main-nav a').addClass('scrolled-link');
+
     }
 }
 
 function changeNavbar() {
     $(window).scroll(function () {
-        if ($(window).width() >= 768) {
+        if ($(window).outerWidth() >= 768) {
 
-            if ($(window).scrollTop() > 0) {
-                $('.navbar-default').css({
-                    'background-color': 'rgba(14,216,214, 0.5)'
-                })
+            if ($(window).scrollTop() > 10) {
+                $('.navbar-default').addClass('scrolled-menu');
+                $('#main-nav a').addClass('scrolled-link');
+
             } else {
-                $('.navbar-default').removeAttr('style');
+                $('.navbar-default').removeClass('scrolled-menu');
+                $('#main-nav a').removeClass('scrolled-link');
             }
         }
     })
@@ -32,24 +33,51 @@ function changeNavbar() {
 function changeSizeHandler() {
 
     $(window).resize(function () {
-        if ($(window).width() < 768) {
-            $('.navbar-default').removeAttr('style');
-        } else if ($(window).scrollTop() > 0) {
-            $('.navbar-default').css({
-                'background-color': 'rgba(14,216,214, 0.5)'
-            })
+        if ($(window).outerWidth() < 768) {
+            $('.navbar-default').removeClass('scrolled-menu');
+            $('#main-nav a').removeClass('scrolled-link');
+        } else if ($(window).scrollTop() > 10) {
+            $('.navbar-default').addClass('scrolled-menu');
+            $('#main-nav a').addClass('scrolled-link');
         }
     })
 
 }
 
-function rotateIcon () {
+function rotateIcon() {
     $('.service-icon').on({
-        'mouseenter': function (){
-           $(this).css('transform','rotate(360deg)');
+        'mouseenter': function () {
+            $(this).css('transform', 'rotate(360deg)');
         },
-        'mouseleave': function (){
-            $(this).css('transform','rotate(0deg)');
+        'mouseleave': function () {
+            $(this).css('transform', 'rotate(0deg)');
         }
     })
 }
+
+function smoothScroll() {
+    $("a").on('click', function (event) {
+
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+            console.log(hash);
+            console.log($(hash).offset().top);
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function () {
+
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+            });
+        } // End if
+    });
+};

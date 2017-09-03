@@ -36,8 +36,7 @@ h4 {
 
 /*wszedzie bedziemy miec paddingi takie same + text align center*/
 
-section,
-footer {
+section{
     padding: 70px 0px;
     text-align: center;
 }
@@ -92,6 +91,24 @@ footer {
     color: #f7f7f7;
     font-weight: normal;
 }
+
+#main-nav a:hover{
+    color: #0ed8d6;
+}
+
+/*klasa zmieniajaca nam menu*/
+.scrolled-menu {
+    background-color: rgba(14,216,214, 0.5);
+}
+
+#main-nav .scrolled-link{
+    color: #f7f7f7;
+}
+
+#main-nav .scrolled-link:hover{
+    color: #222222;
+}
+
 
 
 /*header*/
@@ -206,7 +223,7 @@ footer {
 }
 
 .mask:hover {
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .portfolio-icon {
@@ -258,23 +275,6 @@ footer {
 }
 
 
-/*
-
-.team-icon {
-    background-color: #222222;
-    color: white;
-    font-size: 20px;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    border: 1px solid white;
-    border-radius: 50%;
-    display: inline-block;
-    transition: all 0.5s;
-    margin: 0px 10px;
-}
-*/
-
 .fa-facebook,
 .fa-twitter,
 .fa-linkedin {
@@ -290,7 +290,9 @@ footer {
     margin: 0px 10px;
 }
 
-#team .fa:hover {
+.fa-facebook:hover,
+.fa-twitter:hover,
+.fa-linkedin:hover {
     background-color: #0ed8d6;
     cursor: pointer;
 }
@@ -319,3 +321,29 @@ footer {
     font-weight: 600;
     background-color: #0ed8d6;  
 }*/
+
+footer{
+    font-size: 12px;
+    padding: 20px 0px;
+}
+
+/*remove margin*/
+footer .row:first-child {
+    margin-bottom: 0px;
+}
+
+footer p,
+footer a{
+    line-height: 40px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #333;
+    margin-right: 15px;
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: #333;
+}
