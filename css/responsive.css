@@ -1,6 +1,6 @@
 @media (orientation:portrait) {
     #contact {
-        height: 90vh;
+        /*        height: 100vh;*/
     }
 }
 
@@ -37,6 +37,25 @@
         margin-top: 20px;
     }
     #contact {
-        height: 90vh;
+        /*        height: 90vh;*/
+    }
+}
+
+
+/*zeby nam nie wychodziło spoza kontenera - mozna tez sie pobawic wysokosciami czcionek ?*/
+@media screen and (max-height: 570px) {
+    #contact {
+        height: 120vh;
+        padding: 10px;
+    }
+    #contact .row:first-child {
+        margin-bottom: 0px;
+    }
+}
+
+@media screen and (max-height: 380px) {
+    #contact {
+        padding: 0px;
+        height: 140vh;
     }
 }

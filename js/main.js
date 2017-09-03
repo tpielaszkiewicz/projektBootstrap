@@ -81,3 +81,17 @@ function smoothScroll() {
         } // End if
     });
 };
+
+// metoda symulująca wysłanie maila - metoda post ajax - po stronie serwera juz te dane powinny byc obronione i mail wysłany
+function sendMail() {
+    $.ajax('http://jsonplaceholder.typicode.com/posts', {
+        method: 'POST',
+        data: {
+            title: 'fssoo',
+            body: 'bsssar',
+            userId: 123
+        }
+    }).then(function (data) {
+        console.log(data);
+   });
+}
