@@ -33,29 +33,3 @@
 }
 
 
-/*zeby nam nie wychodziło spoza kontenera - mozna tez sie pobawic wysokosciami czcionek ?*/
-
-@media (orientation:portrait) and (max-height: 570px) {
-    #contact {
-        height: 120vh;
-        padding: 0px;
-    }
-    #contact .row:first-child {
-        margin-bottom: 0px;
-    }
-}
-
-@media screen and (max-height: 450px) {
-    #contact {
-        padding: 10px;
-        height: 110vh;
-    }
-}
-
-@media screen and (max-height: 370px) {
-    #contact {
-        padding: 0px;
-        height: 120vh;
-    }
-}
-

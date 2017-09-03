@@ -301,7 +301,7 @@ section{
 /*stylujemy contact section*/
 
 #contact {
-    height: 80vh;
+/*    height: 80vh;*/
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/footer/world-map.jpg');
     background-size: cover;
     background-position: center;
